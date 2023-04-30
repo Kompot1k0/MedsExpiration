@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct Meds_Expiration_DateApp: App {
+struct MedsExpirationDateApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    private let meds = MedsExpiration()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MedsContentView(medsModel: meds)
         }
     }
 }
